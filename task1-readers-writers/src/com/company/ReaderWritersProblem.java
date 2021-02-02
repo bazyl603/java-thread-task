@@ -14,25 +14,25 @@ public class ReaderWritersProblem {
         Write write = new Write();
 
         Thread t1 = new Thread(read);
-        t1.setName("thread1(read)");
+        t1.setName("1(read)");
 
         Thread x = new Thread(write);
         x.setName("x(write)");
 
         Thread t2 = new Thread(read);
-        t2.setName("thread2(read)");
+        t2.setName("2(read)");
 
-        Thread t3 = new Thread(write);
-        t3.setName("thread3(write)");
+        Thread y = new Thread(write);
+        y.setName("y(write)");
 
-        Thread t4 = new Thread(read);
-        t4.setName("thread4(read)");
+        Thread t3 = new Thread(read);
+        t3.setName("3(read)");
 
         t1.start();
         x.start();
         t3.start();
         t2.start();
-        t4.start();
+        y.start();
     }
 
     static class Read implements Runnable {

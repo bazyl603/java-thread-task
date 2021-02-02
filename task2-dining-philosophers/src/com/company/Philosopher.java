@@ -18,7 +18,7 @@ public class Philosopher implements Runnable {
     @Override
     public void run() {
         try {
-            while (true) {
+            //while (true) {
                 doAction(": Thinking"); // thinking
                 synchronized (leftFork) {
                     doAction(": Picked up left fork");
@@ -28,7 +28,7 @@ public class Philosopher implements Runnable {
                     }
                     doAction(": Put down left fork. Returning to thinking");
                 }
-            }
+            //}
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
